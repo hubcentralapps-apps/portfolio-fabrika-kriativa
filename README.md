@@ -1,3 +1,3 @@
-# Fábrika Kriativa — Portfólio Imersivo V2 Ajustada C
+# Fábrika Kriativa — Portfólio Imersivo V2 Ajustada F
 
-Versão com a seção "Conforto que vira desenho" atualizada com as 3 imagens anexadas pela usuária.
+Atualizado com nova imagem da seção "Parceiros criativos em cada etapa do projeto" e capa em PNG com melhor qualidade visual.
