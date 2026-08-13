@@ -72,8 +72,8 @@
     .intro-photo::before{content:"";position:absolute;left:-28px;top:-28px;width:54%;height:54%;border-left:1px solid var(--bronze);border-top:1px solid var(--bronze);z-index:2;pointer-events:none}
 
     .manifesto{padding:72px 0;background:#e9dfd3}
-    .manifesto-row{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
-    .manifesto h2{font-size:clamp(2.2rem,3.5vw,3.6rem);margin:0}
+    .manifesto-row{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .manifesto h2{font-size:clamp(2.2rem,3.5vw,3.6rem);margin:0;display:flex;align-items:center;min-height:180px}
     .manifesto p{margin:0;max-width:520px}
 
     .services{background:var(--paper)}
@@ -104,7 +104,7 @@
     .editorial-main{min-height:420px;overflow:hidden}
     .editorial-main img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
     .service-editorial:hover .editorial-main img{transform:scale(1.02)}
-    .editorial-thumbs{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:10px;margin-top:10px;height:150px}
+    .editorial-thumbs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px;height:170px}
     .editorial-thumbs.two{grid-template-columns:1fr 1fr;height:220px}
     .editorial-thumbs figure{margin:0;overflow:hidden;background:#ddd}
     .editorial-thumbs img{transition:transform .6s ease}
@@ -135,7 +135,8 @@
 
     .partners{background:#eee4d9}
     .partners-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-    .quote{margin-top:34px;border-left:1px solid var(--bronze);padding-left:26px;font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,2.4vw,2.25rem);font-style:italic;line-height:1.22;color:#665143}
+    .quote{margin:34px 0 0;border-left:1px solid var(--bronze);padding-left:26px;font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,2.4vw,2.25rem);font-style:italic;line-height:1.22;color:#665143}
+    .quote-signature{margin:16px 0 0 26px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#8f7259}
     .partner-collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:280px 280px;gap:12px;box-shadow:var(--shadow)}
     .partner-collage figure{margin:0;overflow:hidden;background:#ddd}
 
@@ -281,9 +282,9 @@
             </div>
           </div>
           <div class="editorial-thumbs" aria-label="Galeria de cortinas">
-            <figure><img src="assets/photos/project-living.webp" alt="Sala com pé-direito duplo e cortinas do piso ao teto" loading="lazy"></figure>
-            <figure><img src="assets/photos/curtains-bed.webp" alt="Quarto com cortinas sob medida, banco e poltrona em ambiente elegante" loading="lazy"></figure>
-            <figure><img src="assets/photos/curtains-office.webp" alt="Home office com cortinas sob medida e atmosfera sofisticada" loading="lazy"></figure>
+            <figure><img src="assets/photos/project-living.webp" alt="Sala com sofá e cortinas leves em tecido natural" loading="lazy"></figure>
+            <figure><img src="assets/photos/curtains-bed.webp" alt="Living com pé-direito duplo e cortinas sob medida" loading="lazy"></figure>
+            <figure><img src="assets/photos/curtains-office.webp" alt="Quarto elegante com cortinas sob medida em composição neutra" loading="lazy"></figure>
           </div>
         </article>
 
@@ -361,12 +362,13 @@
           <h2>Parceiros criativos em cada etapa do projeto.</h2>
           <p>Entendemos os desafios de quem projeta. Da concepção à instalação, entregamos soluções que unem estética, funcionalidade e excelência.</p>
           <blockquote class="quote">“A Fábrika Kriativa entende o que precisamos e entrega sempre com excelência. É uma parceira que agrega valor real aos nossos projetos.”</blockquote>
+          <div class="quote-signature">Escritório de arquitetura</div>
         </div>
         <div class="partner-collage reveal" aria-label="Curadoria de tecidos para projetos de interiores">
-          <figure><img src="assets/photos/partner-fabric-1.webp" alt="Amostras de tecido para curadoria de projeto" loading="lazy"></figure>
-          <figure><img src="assets/photos/partner-fabric-2.webp" alt="Tecido natural texturizado em detalhe" loading="lazy"></figure>
-          <figure><img src="assets/photos/partner-fabric-3.webp" alt="Amostras de tecidos em texturas variadas" loading="lazy"></figure>
-          <figure><img src="assets/photos/partner-fabric-4.webp" alt="Tecidos em camadas com textura marcante" loading="lazy"></figure>
+          <figure><img src="assets/photos/partner-arch-1.webp" alt="Quarto com composição de cama, papel de parede e cortinas sob medida" loading="lazy"></figure>
+          <figure><img src="assets/photos/partner-arch-2.webp" alt="Amostras de tecidos e acabamentos em composição sofisticada" loading="lazy"></figure>
+          <figure><img src="assets/photos/partner-arch-3.webp" alt="Amostras têxteis em tons neutros para curadoria de projeto" loading="lazy"></figure>
+          <figure><img src="assets/photos/partner-arch-4.webp" alt="Cortina em tecido natural com caimento leve e elegante" loading="lazy"></figure>
         </div>
       </div>
     </section>
