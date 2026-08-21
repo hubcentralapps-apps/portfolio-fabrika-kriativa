@@ -1,81 +1,283 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Fábrika Kriativa — Portfólio Imersivo</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#191512;--paper:#f3eee7;--ink:#2e2723;--bronze:#b78a61}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);font-family:Manrope,sans-serif;color:white}
-img{width:100%;height:100%;object-fit:cover;display:block}a{color:inherit;text-decoration:none}
-.nav{position:fixed;z-index:50;top:18px;left:50%;transform:translateX(-50%);width:min(94%,1140px);display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border:1px solid rgba(255,255,255,.12);background:rgba(25,21,18,.5);backdrop-filter:blur(16px);border-radius:999px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}
-.nav .links{display:flex;gap:18px;color:rgba(255,255,255,.72)}
-.hero{min-height:100vh;position:relative;overflow:hidden}.hero-bg{position:absolute;inset:0}.hero-bg:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,9,.72),rgba(14,11,9,.18) 58%,rgba(14,11,9,.12))}
-.hero-content{position:relative;z-index:2;min-height:100vh;display:flex;align-items:flex-end;padding:0 5vw 8vh;max-width:980px}.kicker{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:#e6c4a2}
-.hero h1,.bigtitle,.quote{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:-.03em}.hero h1{font-size:clamp(3rem,5.4vw,5.4rem);line-height:.9;margin:18px 0 24px}.hero p{font-size:1.05rem;line-height:1.75;max-width:620px;color:rgba(255,255,255,.84)}
-.statement{background:var(--paper);color:var(--ink);display:grid;place-items:center;padding:82px 24px}.statement .inner{max-width:1040px;text-align:center}.statement .bigtitle{font-size:clamp(2.7rem,4.8vw,4.8rem);line-height:.98;margin:0}.statement p{max-width:740px;margin:24px auto 0;color:#76645a;font-size:1.02rem;line-height:1.8}.statement .line{width:1px;height:64px;background:var(--bronze);margin:30px auto}
-.chapter{background:var(--paper);color:var(--ink);padding:68px 0}.chapter.dark{background:#2d2521;color:white}.chapter-wrap{max-width:1140px;margin:auto;padding:0 24px}.chapter-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:end;margin-bottom:24px}.num{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}.bigtitle{font-size:clamp(2.55rem,4vw,3.8rem);line-height:1;margin:10px 0 0}.chapter-copy{max-width:560px;color:#78675e;font-size:1rem;line-height:1.75}.dark .chapter-copy{color:rgba(255,255,255,.76)}
-.gallery-a,.gallery-b{display:grid;gap:16px;align-items:start;--stackH:min(52vw,540px)}.gallery-a{grid-template-columns:1.35fr .95fr}.gallery-b{grid-template-columns:.95fr 1.35fr}.visual{overflow:hidden;background:#ddd;border-radius:0}.visual.main{height:var(--stackH)}.side{display:grid;grid-template-rows:repeat(2, calc((var(--stackH) - 16px)/2));gap:16px}.side .visual{height:100%}.caption{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#927965;margin-top:12px}.dark .caption{color:#d5b99f}
-.mood{background:#e8ddd1;color:var(--ink);padding:76px 0}.mood-grid{max-width:1140px;margin:auto;padding:0 24px;display:grid;grid-template-columns:.88fr 1.12fr;gap:24px;align-items:center}.mood .quote{font-size:clamp(2.2rem,3.5vw,3.4rem);line-height:1.05;margin:0}.mood .small{margin-top:20px;color:#75655c;max-width:500px;font-size:1rem;line-height:1.75}.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mosaic .visual{aspect-ratio:1/1.06}
-.partners{background:#f5f0e9;color:var(--ink);padding:88px 0}.partners-grid{max-width:1140px;margin:auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.partners h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.7rem,4vw,3.8rem);line-height:1.02;margin:15px 0 20px}.partners p{color:#76645a;max-width:560px;font-size:1rem;line-height:1.75}.testimonial{margin-top:34px;padding-top:24px;border-top:1px solid rgba(46,39,35,.15)}.testimonial blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.65rem,2.35vw,2.2rem);line-height:1.24;margin:0;color:#79543d}.testimonial cite{display:block;margin-top:14px;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;color:#937662;font-style:normal}.partners-img{height:min(54vw,560px);overflow:hidden}
-.closing{min-height:70vh;background:#171310;display:grid;place-items:center;text-align:center;padding:60px 24px}.closing .inner{max-width:900px}.closing h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,4.5vw,4.6rem);line-height:.97;margin:18px 0 22px}.closing p{max-width:650px;margin:auto;color:rgba(255,255,255,.76);font-size:1rem;line-height:1.78}.ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}.ctas a{padding:13px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);font-size:.86rem}.ctas a:first-child{background:white;color:#211b18}
-@media(max-width:980px){.nav .links{display:none}.chapter-head,.gallery-a,.gallery-b,.mood-grid,.partners-grid{grid-template-columns:1fr}.gallery-a,.gallery-b{--stackH:auto}.visual.main{height:auto;aspect-ratio:4/3}.side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.side .visual{aspect-ratio:4/3;height:auto}.mosaic{grid-template-columns:repeat(2,1fr)}.partners-img{height:auto;aspect-ratio:4/3}.hero-content{padding:0 24px 8vh}.chapter-wrap,.mood-grid,.partners-grid{padding:0 18px}.statement{padding:70px 18px}}
-@media(max-width:640px){.side,.mosaic{grid-template-columns:1fr}.hero h1{font-size:3rem}.bigtitle{font-size:2.6rem}.chapter{padding:52px 0}.statement .bigtitle{font-size:2.8rem}.hero p,.chapter-copy,.statement p,.mood .small,.partners p,.closing p{font-size:.98rem;line-height:1.7}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fábrika Kriativa — Portfólio Institucional</title>
+  <meta name="description" content="Portfólio institucional da Fábrika Kriativa para áreas comuns, recepções e ambientes corporativos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f4efe9;
+      --bg-soft:#ede4d8;
+      --card:#fffdfa;
+      --dark:#1f1916;
+      --text:#3a312c;
+      --muted:#78685f;
+      --line:#dccfc2;
+      --accent:#b78a66;
+      --white:#ffffff;
+      --shadow:0 18px 40px rgba(31,25,22,.08);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,sans-serif}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:40;width:min(1120px,calc(100% - 32px));display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:999px;background:rgba(31,25,22,.68);backdrop-filter:blur(16px);color:#fff;border:1px solid rgba(255,255,255,.10)}
+    .nav strong,.nav span,.nav a{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase}
+    .nav .links{display:flex;gap:22px;color:rgba(255,255,255,.78)}
+    .hero{position:relative;min-height:98vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+    .hero .bg{position:absolute;inset:0}
+    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,11,9,.82) 0%,rgba(15,11,9,.58) 45%,rgba(15,11,9,.2) 100%)}
+    .hero-inner{position:relative;z-index:1;padding:150px 0 76px;max-width:740px}
+    .eyebrow{font-size:.78rem;letter-spacing:.20em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+    .hero .eyebrow{color:#e8c3a1}
+    h1,h2,h3,h4,.quote{font-family:"Cormorant Garamond",serif;font-weight:500;letter-spacing:-.03em;margin:0}
+    h1{font-size:clamp(3rem,6vw,5.2rem);line-height:.92;margin-bottom:18px}
+    .hero p{margin:0;color:rgba(255,255,255,.86);font-size:1.02rem;line-height:1.85}
+    .floating-points{position:relative;z-index:3;margin-top:-48px}
+    .points-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .point{background:var(--card);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+    .point b{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+    .point h3{font-size:1.9rem;margin-bottom:8px}
+    .point p{margin:0;color:var(--muted);line-height:1.72;font-size:.94rem}
+    .section{padding:88px 0}
+    .section.alt{background:var(--bg-soft)}
+    .section-head{max-width:800px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1.01;margin:8px 0 14px}
+    .section-head p{margin:0;color:var(--muted);line-height:1.85;font-size:1rem}
+    .concierge{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:stretch}
+    .concierge-copy{display:flex;flex-direction:column;gap:16px}
+    .note{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .note h3{font-size:1.95rem;margin-bottom:10px}
+    .note p{margin:0;color:var(--muted);line-height:1.8}
+    .mini{display:grid;gap:12px}
+    .mini-item{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:20px;padding:18px 18px}
+    .mini-item strong{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+    .mini-item span{color:var(--muted);font-size:.94rem;line-height:1.68}
+    .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .tile{position:relative;min-height:275px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .tile figcaption{position:absolute;left:14px;bottom:14px;background:rgba(23,18,15,.72);color:#fff;padding:10px 12px;border-radius:999px;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+    .services{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .service{background:var(--card);border-radius:22px;padding:22px 18px;box-shadow:var(--shadow)}
+    .service b{display:block;color:var(--accent);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+    .service h3{font-size:1.35rem;line-height:1.06;margin-bottom:10px}
+    .service p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.7}
+    .refresh{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+    .refresh-visual{display:grid;grid-template-columns:1fr;gap:18px}
+    .refresh-visual .tile{min-height:290px}
+    .refresh-copy{display:flex;flex-direction:column;justify-content:center;background:var(--card);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+    .refresh-copy .quote{font-size:clamp(2.05rem,3.6vw,3.25rem);line-height:1.02;margin:8px 0 16px;max-width:11ch}
+    .refresh-copy p{margin:0 0 16px;color:var(--muted);line-height:1.82}
+    .bullets{display:grid;gap:12px}
+    .bullets div{display:flex;gap:12px;align-items:flex-start}
+    .bullets i{display:block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:8px;flex:0 0 auto}
+    .bullets span{color:var(--muted);line-height:1.68}
+    .process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .step{background:var(--card);padding:22px 18px;border-top:2px solid var(--accent);border-radius:0 0 20px 20px;box-shadow:var(--shadow)}
+    .step b{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+    .step h3{font-size:1.3rem;margin-bottom:8px}
+    .step p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.68}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .card .thumb{aspect-ratio:4/3}
+    .card .body{padding:20px}
+    .card h3{font-size:1.48rem;line-height:1.08;margin-bottom:8px}
+    .card p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.72}
+    .cta{background:var(--dark);color:#fff;padding:84px 0}
+    .cta-wrap{max-width:900px}
+    .cta h2{font-size:clamp(2.4rem,4.4vw,4rem);line-height:.96;margin:10px 0 16px}
+    .cta p{margin:0;color:rgba(255,255,255,.72);line-height:1.85;font-size:1rem;max-width:760px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .buttons a{display:inline-flex;align-items:center;justify-content:center;min-width:190px;padding:14px 20px;border-radius:999px;font-size:.92rem;border:1px solid rgba(255,255,255,.18)}
+    .buttons a.primary{background:#fff;color:var(--dark)}
+    footer{padding:20px 0 34px;background:var(--dark);color:rgba(255,255,255,.55)}
+    footer .container{font-size:.83rem}
+    @media (max-width:1080px){
+      .services{grid-template-columns:repeat(3,1fr)}
+      .process{grid-template-columns:repeat(3,1fr)}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .concierge,.refresh{grid-template-columns:1fr}
+    }
+    @media (max-width:760px){
+      .nav .links,.nav span{display:none}
+      .points-grid,.services,.process,.cards{grid-template-columns:1fr}
+      .mosaic{grid-template-columns:1fr}
+      .container{width:min(100% - 28px,1180px)}
+      .section{padding:70px 0}
+      .hero-inner{padding:130px 0 60px}
+      .tile{min-height:230px}
+      .refresh-visual .tile{min-height:240px}
+      .buttons a{width:100%}
+    }
+  </style>
 </head>
 <body>
-<header class="nav"><div>Fábrika Kriativa</div><div class="links"><a href="#cortinas">Cortinas</a><a href="#persianas">Persianas</a><a href="#cabeceiras">Cabeceiras</a><a href="#parcerias">Parcerias</a></div><div>Portfólio 2026</div></header>
+  <header class="nav">
+    <strong>Fábrika Kriativa</strong>
+    <div class="links">
+      <a href="#concierge">Concierge</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#ambientes">Ambientes</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <span>Portfólio institucional</span>
+  </header>
 
-<section class="hero">
-<div class="hero-bg"><img src="assets/images/hero.png" alt="Sala sofisticada com cortinas do piso ao teto"></div>
-<div class="hero-content"><div><div class="kicker">Fábrika Kriativa</div><h1>Não é sobre integrar o ambiente,<br>é sobre definir a sensação de estar nele</h1><p>Um portfólio sobre luz, textura, conforto e acabamento — as camadas que transformam um projeto bem pensado em uma experiência completa.</p></div></div>
-</section>
+  <section class="hero">
+    <div class="bg"><img src="assets/images/hero.png" alt="Recepção com sofá curvo, poltronas verdes, cortina de tecido e persiana rolô"></div>
+    <div class="container hero-inner">
+      <div class="eyebrow">Fábrika Kriativa · áreas comuns e corporativas</div>
+      <h1>Soluções consultivas para ambientes que precisam funcionar bem — e encantar.</h1>
+      <p>Atuamos na leitura do ambiente, na curadoria de materiais e na execução de soluções sob medida para recepções, áreas comuns, coworkings, salas de reunião, espaços gourmet, ambientes de convivência e lazer. O foco não é apenas compor: é fazer o espaço trabalhar melhor, comunicar mais valor e entregar uma experiência mais coerente com o padrão do empreendimento.</p>
+    </div>
+  </section>
 
-<section class="statement">
-<div class="inner"><div class="kicker" style="color:var(--bronze)">Manifesto</div><h2 class="bigtitle">O projeto desenha o espaço.<br>A composição final dá sentido a ele.</h2><div class="line"></div><p>É na finalização que a intenção ganha corpo. Cortinas modulam a luz. Cabeceiras criam presença. Texturas mudam a percepção. Persianas equilibram função e leveza. A Fábrika Kriativa atua exatamente nessa camada.</p></div>
-</section>
+  <div class="container floating-points">
+    <div class="points-grid">
+      <article class="point"><b>01</b><h3>Usabilidade</h3><p>Entender como o espaço é usado, por quem e com que frequência.</p></article>
+      <article class="point"><b>02</b><h3>Funcionalidade</h3><p>Avaliar o que precisa durar mais, controlar melhor a luz, organizar o ambiente ou facilitar a rotina.</p></article>
+      <article class="point"><b>03</b><h3>Composição</h3><p>Definir como materiais, texturas e acabamentos transformam a percepção e a valorização do espaço.</p></article>
+    </div>
+  </div>
 
-<section class="chapter" id="cortinas">
-<div class="chapter-wrap">
-<div class="chapter-head"><div><div class="num">01 — Cortinas</div><h2 class="bigtitle">Luz que veste o espaço.</h2></div><div class="chapter-copy">Mais do que cobrir vãos, cortinas definem caimento, escala e atmosfera. Entram como elemento arquitetônico e sensorial, desenhando a luz e completando a composição.</div></div>
-<div class="gallery-a"><div><div class="visual main"><img src="assets/images/curtain2.webp" alt="Sala com cortinas e painel decorativo"></div><div class="caption">Cortinas sob medida · composição e luz</div></div><div class="side"><div class="visual"><img src="assets/images/curtain.webp" alt="Cortina iluminada em ambiente contemporâneo"></div><div class="visual"><img src="assets/images/curtain3.webp" alt="Textura de cortina em tecido natural"></div></div></div>
-</div>
-</section>
+  <section class="section" id="concierge">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Concierge Fábrika Kriativa</div>
+        <h2>Começamos pela leitura do ambiente.</h2>
+        <p>Antes de falar de produto, entendemos o contexto de uso, as necessidades do espaço e o resultado que faz sentido alcançar. Essa abordagem deixa a tomada de decisão mais clara e faz a solução nascer da necessidade real do ambiente.</p>
+      </div>
+      <div class="concierge">
+        <div class="concierge-copy">
+          <div class="note">
+            <h3>Uma abordagem que organiza a decisão.</h3>
+            <p>Apoiamos síndicos, administradoras e gestores na avaliação de possibilidades, na comparação entre alternativas e na condução da solução sob medida — da especificação à instalação, com menos ruído e mais clareza.</p>
+          </div>
+          <div class="mini">
+            <div class="mini-item"><strong>Leitura do uso</strong><span>Observamos o comportamento do ambiente, a intensidade do uso e os pontos que mais impactam a rotina.</span></div>
+            <div class="mini-item"><strong>Curadoria de solução</strong><span>Indicamos materiais e intervenções coerentes com o padrão do espaço, com o orçamento e com a manutenção esperada.</span></div>
+            <div class="mini-item"><strong>Execução organizada</strong><span>Transformamos a decisão em entrega, com atenção ao acabamento, à instalação e à experiência final.</span></div>
+          </div>
+        </div>
+        <div class="mosaic">
+          <figure class="tile"><img src="assets/images/coworking-main.png" alt="Espaço coworking com textura mineral escura"><figcaption>Espaço coworking</figcaption></figure>
+          <figure class="tile"><img src="assets/images/lobby-main.png" alt="Lobby com painel Biomas"><figcaption>Recepção e lobby</figcaption></figure>
+          <figure class="tile"><img src="assets/images/meeting-main.png" alt="Sala de reunião com parede texturizada"><figcaption>Sala de reunião colaborativa</figcaption></figure>
+          <figure class="tile"><img src="assets/images/lounge-main.png" alt="Lounge com papel botânico"><figcaption>Spa e Wellness</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="chapter dark" id="persianas">
-<div class="chapter-wrap">
-<div class="chapter-head"><div><div class="num">02 — Persianas</div><h2 class="bigtitle">Controle sem perder leveza.</h2></div><div class="chapter-copy">Soluções que equilibram privacidade, entrada de luz e funcionalidade cotidiana sem romper a linguagem do ambiente.</div></div>
-<div class="gallery-b"><div class="side"><div class="visual"><img src="assets/images/blind3.webp" alt="Escritório com persiana e cortina"></div><div class="visual"><img src="assets/images/blind2.webp" alt="Sala de jantar com persiana"></div></div><div><div class="visual main"><img src="assets/images/blind.webp" alt="Sala de jantar com persiana zebra"></div><div class="caption">Persianas sob medida · função integrada à estética</div></div></div>
-</div>
-</section>
+  <section class="section alt" id="solucoes">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Soluções</div>
+        <h2>Acabamentos e intervenções que resolvem sem transformar tudo em obra.</h2>
+        <p>As soluções entram como consequência da análise. O objetivo não é oferecer um item isolado, mas escolher o que melhor responde ao uso, ao padrão do ambiente e ao resultado que se quer alcançar.</p>
+      </div>
+      <div class="services">
+        <article class="service"><b>01</b><h3>Cortinas e persianas</h3><p>Controle de luz, privacidade, conforto visual e acabamento para áreas comuns e corporativas.</p></article>
+        <article class="service"><b>02</b><h3>Reforma de estofados</h3><p>Recuperação de bancos, cadeiras, poltronas e mobiliário existente com nova leitura de uso.</p></article>
+        <article class="service"><b>03</b><h3>Papéis e revestimentos</h3><p>Atualização visual de halls, salas, recepções e áreas de convivência com alto impacto estético.</p></article>
+        <article class="service"><b>04</b><h3>Peças sob medida</h3><p>Soluções especiais para apoio, espera, convívio e composição de ambientes que pedem personalização.</p></article>
+        <article class="service"><b>05</b><h3>Acabamentos têxteis</h3><p>Materiais que equilibram estética, aconchego, resistência e manutenção para uso recorrente.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section class="chapter" id="cabeceiras">
-<div class="chapter-wrap">
-<div class="chapter-head"><div><div class="num">03 — Cabeceiras</div><h2 class="bigtitle">Conforto que vira desenho.</h2></div><div class="chapter-copy">Cabeceiras ocupam uma área central na percepção do quarto. Por isso tratamos forma, proporção, volume e acabamento como parte do conceito do ambiente — não como complemento genérico.</div></div>
-<div class="gallery-a"><div><div class="visual main"><img src="assets/images/headboard1.webp" alt="Cabeceira escultural rosé"></div><div class="caption">Geometria, textura e presença</div></div><div class="side"><div class="visual"><img src="assets/images/headboard2.webp" alt="Cabeceira do chão ao teto"></div><div class="visual"><img src="assets/images/headboard3.webp" alt="Cabeceira estofada em nicho"></div></div></div>
-</div>
-</section>
+  <section class="section">
+    <div class="container">
+      <div class="refresh">
+        <div class="refresh-visual">
+          <figure class="tile"><img src="assets/images/cinema-main.png" alt="Cinema privativo verde com xadrez sofisticado"></figure>
+          <figure class="tile"><img src="assets/images/revitalizacao-main.png" alt="Lounge sofisticado com parede botânica e mesa de bilhar"></figure>
+        </div>
+        <div class="refresh-copy">
+          <div class="eyebrow">Reforma inteligente</div>
+          <div class="quote">Um projeto de modernização pode ser mais estratégico do que substituir tudo.</div>
+          <p>Em muitos casos, recuperar estofados, renovar revestimentos, ajustar o controle de luz ou recompor materiais entrega mais resultado do que trocar o ambiente inteiro. Avaliamos o que vale preservar, o que merece ser renovado e onde faz sentido investir.</p>
+          <div class="bullets">
+            <div><i></i><span>Mais coerência entre custo, uso e resultado final.</span></div>
+            <div><i></i><span>Menos ruptura operacional para o condomínio ou para a área comum.</span></div>
+            <div><i></i><span>Intervenções que valorizam o ambiente e alongam a vida útil do que já existe.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="mood">
-<div class="mood-grid">
-<div><div class="kicker" style="color:var(--bronze)">04 — Materiais</div><p class="quote">A percepção de qualidade começa antes do toque.</p><p class="small">Tramas, tecidos, revestimentos e acabamentos criam profundidade, ritmo e identidade. A curadoria certa dá unidade às escolhas e evita que a finalização pareça desconectada do projeto.</p></div>
-<div class="mosaic"><div class="visual"><img src="assets/images/texture1.webp" alt="Amostras de tecido em composição sofisticada"></div><div class="visual"><img src="assets/images/texture2.webp" alt="Textura de tecido neutro"></div><div class="visual"><img src="assets/images/texture3.webp" alt="Cortina translúcida com textura natural"></div></div>
-</div>
-</section>
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Como atuamos</div>
+        <h2>Da leitura da demanda à entrega da solução.</h2>
+        <p>Conduzimos cada etapa com clareza para que a decisão fique mais simples e o resultado final faça sentido técnica e esteticamente.</p>
+      </div>
+      <div class="process">
+        <article class="step"><b>01</b><h3>Escuta</h3><p>Entendemos a necessidade, o contexto do ambiente e as prioridades de uso.</p></article>
+        <article class="step"><b>02</b><h3>Avaliação</h3><p>Analisamos funcionalidade, conservação, percepção e possibilidades de intervenção.</p></article>
+        <article class="step"><b>03</b><h3>Curadoria</h3><p>Propomos materiais, acabamentos e soluções adequadas ao padrão do espaço.</p></article>
+        <article class="step"><b>04</b><h3>Execução</h3><p>Produção, reforma, instalação e acompanhamento do que foi definido.</p></article>
+        <article class="step"><b>05</b><h3>Entrega</h3><p>Finalização com atenção à organização, ao acabamento e à experiência de uso.</p></article>
+      </div>
+    </div>
+  </section>
 
-<section class="partners" id="parcerias">
-<div class="partners-grid">
-<div><div class="kicker" style="color:var(--bronze)">Arquitetos e decoradores</div><h2>Parceiros criativos em cada etapa do projeto.</h2><p>Da especificação à instalação, apoiamos o projeto com leitura estética, viabilidade de execução e cuidado nos detalhes que aparecem justamente quando tudo precisa funcionar em conjunto.</p><div class="testimonial"><blockquote>“A Fábrika Kriativa entende o que precisamos e entrega sempre com excelência. É uma parceira que agrega valor real aos nossos projetos.”</blockquote><cite>Escritório de arquitetura</cite></div></div>
-<div class="partners-img"><img src="assets/images/final.webp" alt="Quarto elegante com cabeceira e composição têxtil"></div>
-</div>
-</section>
+  <section class="section" id="ambientes">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Ambientes onde apoiamos</div>
+        <h2>Espaços que comunicam cuidado, padrão e experiência.</h2>
+        <p>Recepções, coworkings, salas de reunião, áreas gourmet, espaços de descompressão, wellness, brinquedotecas e outros pontos que precisam funcionar bem e transmitir valor.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="thumb"><img src="assets/images/recepcao-card.png" alt="Recepção corporativa em marfim texturizado"></div><div class="body"><h3>Recepção e atendimento</h3><p>Ambientes que acolhem, apresentam o padrão do empreendimento e organizam a primeira percepção do espaço.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/coworking-card.png" alt="Coworking residencial com parede xadrez taupe"></div><div class="body"><h3>Espaço coworking</h3><p>Conforto visual, apoio à rotina e soluções que favorecem trabalho, pausa e permanência qualificada.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/gourmet-card.png" alt="Sala gourmet com parede botânica em sálvia"></div><div class="body"><h3>Área gourmet e coffee point</h3><p>Materiais e composições que tornam o uso frequente mais agradável, elegante e funcional.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/descompressao-card.png" alt="Sala elegante com poltronas em bege"></div><div class="body"><h3>Lazer e descompressão</h3><p>Espaços para pausa, encontro informal e permanência mais leve no dia a dia.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/wellness-card.png" alt="Espreguiçadeiras em área de relaxamento"></div><div class="body"><h3>Wellness e relaxamento</h3><p>Leveza, conforto e materiais acolhedores para ambientes de pausa, cuidado e bem-estar.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/kids-card.png" alt="Brinquedoteca com mural de natureza"></div><div class="body"><h3>Brinquedoteca e family space</h3><p>Soluções visuais afetivas, resistentes e fáceis de manter para áreas voltadas à convivência das famílias.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-<section class="closing" id="contato">
-<div class="inner"><div class="kicker">Fábrika Kriativa</div><h2>O detalhe que finaliza o ambiente.</h2><p>Cortinas, persianas, cabeceiras, papéis de parede e acabamentos têxteis sob medida para projetos que pedem intenção até o último detalhe.</p><div class="ctas"><a href="https://wa.me/551123764000" target="_blank">Falar pelo WhatsApp</a><a href="https://www.instagram.com/fabrika_kriativa/" target="_blank">Instagram</a><a href="https://fabrikakriativa.com.br/" target="_blank">Site</a></div></div>
-</section>
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Mais possibilidades</div>
+        <h2>Mais repertório para áreas comuns e ambientes multiuso.</h2>
+        <p>Também podemos apoiar cinemas, salões de festas, halls e outros ambientes de convivência com soluções que equilibram identidade, durabilidade e experiência.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="thumb"><img src="assets/images/cinema-alt.png" alt="Sala de cinema com parede xadrez contínua"></div><div class="body"><h3>Cinema e projeção</h3><p>Conforto, controle de luz e materiais que ajudam a construir atmosfera e uso qualificado.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/festas-alt.png" alt="Salão de festas com parede flora"></div><div class="body"><h3>Salão de festas</h3><p>Composição, acolhimento e acabamento para áreas de convívio social e eventos.</p></div></article>
+        <article class="card"><div class="thumb"><img src="assets/images/hall-alt.png" alt="Hall espelhado com painel botânico azul"></div><div class="body"><h3>Hall e circulação</h3><p>Atualização visual e valorização dos pontos de passagem que ajudam a definir o padrão do empreendimento.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contato">
+    <div class="container cta-wrap">
+      <div class="eyebrow">Fábrika Kriativa · portfólio institucional</div>
+      <h2>Mais do que executar, ajudamos a definir a solução certa para cada ambiente.</h2>
+      <p>Consideramos uso, manutenção, conforto, composição e viabilidade para transformar necessidades do dia a dia em espaços mais resolvidos, acolhedores e coerentes com o padrão do empreendimento. Se fizer sentido conversar sobre uma demanda do seu ambiente, o melhor caminho é um contato direto com a Fábrika.</p>
+      <div class="buttons">
+        <a class="primary" href="https://wa.me/551123764000?text=Ol%C3%A1%21%20Vi%20o%20portf%C3%B3lio%20da%20F%C3%A1brika%20Kriativa%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+        <a href="https://www.instagram.com/fabrika_kriativa/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://fabrikakriativa.com.br/" target="_blank" rel="noopener">Acessar o site</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">Fábrika Kriativa · cortinas, persianas, papéis de parede, estofados e soluções sob medida.</div>
+  </footer>
 </body>
 </html>

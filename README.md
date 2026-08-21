@@ -1,3 +1,2 @@
-# Fábrika Kriativa — Portfólio Imersivo V2 Ajustada F
-
-Atualizado com nova imagem da seção "Parceiros criativos em cada etapa do projeto" e capa em PNG com melhor qualidade visual.
+Portfólio institucional da Fábrika Kriativa.
+Abra o arquivo index.html mantendo a pasta assets no mesmo nível.
